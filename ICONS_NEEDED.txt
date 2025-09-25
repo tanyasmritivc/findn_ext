@@ -1,0 +1,21 @@
+ICON FILES NEEDED FOR FINDN AI EXTENSION
+
+The extension requires the following icon files in the 'icons' folder:
+- icon16.png (16x16 pixels)
+- icon32.png (32x32 pixels) 
+- icon48.png (48x48 pixels)
+- icon128.png (128x128 pixels)
+
+TEMPORARY SOLUTION:
+For testing purposes, you can:
+1. Create an 'icons' folder in the extension directory
+2. Use any PNG images with the required dimensions
+3. Rename them to match the filenames above
+
+DESIGN SUGGESTIONS:
+- Use a modern, minimal design
+- Colors: Black (#000000) and white (#ffffff) to match the extension theme
+- Consider using "AI" text or a network/connection symbol
+- Keep it simple and recognizable at small sizes
+
+The extension will work without icons, but Chrome will show a default puzzle piece icon instead.

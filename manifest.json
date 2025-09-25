@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "Findn AI",
+  "version": "1.0.0",
+  "description": "AI-powered insights for LinkedIn and Instagram profiles - discover connections, conversation starters, and interest expansions.",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://linkedin.com/*",
+    "https://www.linkedin.com/*",
+    "https://instagram.com/*",
+    "https://www.instagram.com/*",
+    "https://*.railway.app/*",
+    "https://*.herokuapp.com/*",
+    "https://*.vercel.app/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://linkedin.com/*",
+        "https://www.linkedin.com/*",
+        "https://instagram.com/*",
+        "https://www.instagram.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Findn AI - Get AI Insights"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "style.css"],
+      "matches": [
+        "https://linkedin.com/*",
+        "https://www.linkedin.com/*",
+        "https://instagram.com/*",
+        "https://www.instagram.com/*"
+      ]
+    }
+  ]
+}

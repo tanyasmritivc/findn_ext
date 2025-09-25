@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findn AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <h1>Findn AI</h1>
+                <p>AI-powered networking insights</p>
+            </div>
+            <button class="settings-btn" id="settingsBtn">⚙️</button>
+        </div>
+
+        <!-- Loading State -->
+        <div class="loading" id="loadingState">
+            <div class="spinner"></div>
+            <p>Analyzing profile...</p>
+        </div>
+
+        <!-- Error State -->
+        <div class="error" id="errorState" style="display: none;">
+            <div class="error-icon">⚠️</div>
+            <p id="errorMessage">Something went wrong. Please try again.</p>
+            <button class="retry-btn" id="retryBtn">Retry</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content" id="mainContent" style="display: none;">
+            <!-- Connections Card -->
+            <div class="card" id="connectionsCard">
+                <div class="card-header">
+                    <div class="card-icon">🤝</div>
+                    <h2>Connections</h2>
+                </div>
+                <div class="card-content" id="connectionsContent">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+                <button class="copy-btn" data-card="connections">📋 Copy All</button>
+            </div>
+
+            <!-- Communication Starters Card -->
+            <div class="card" id="startersCard">
+                <div class="card-header">
+                    <div class="card-icon">💬</div>
+                    <h2>Communication Starters</h2>
+                </div>
+                <div class="card-content" id="startersContent">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+                <button class="copy-btn" data-card="starters">📋 Copy All</button>
+            </div>
+
+            <!-- Interest Expansions Card -->
+            <div class="card" id="expansionsCard">
+                <div class="card-header">
+                    <div class="card-icon">🚀</div>
+                    <h2>Interest Expansions</h2>
+                </div>
+                <div class="card-content" id="expansionsContent">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+                <button class="copy-btn" data-card="expansions">📋 Copy All</button>
+            </div>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="settings-panel" id="settingsPanel" style="display: none;">
+            <div class="settings-header">
+                <h2>Settings</h2>
+                <button class="close-btn" id="closeSettingsBtn">✕</button>
+            </div>
+            <div class="settings-content">
+                <div class="setting-group">
+                    <label>Backend Status</label>
+                    <div id="backendStatus" class="backend-status">
+                        <span class="status-indicator" id="statusIndicator">🔴</span>
+                        <span id="statusText">Checking connection...</span>
+                    </div>
+                    <small>The backend server handles AI processing securely. Make sure it's running on localhost:3002</small>
+                </div>
+                <div class="setting-group">
+                    <label>Supported Platforms</label>
+                    <div class="platform-toggles">
+                        <label class="toggle">
+                            <input type="checkbox" id="linkedinToggle" checked>
+                            <span class="toggle-slider"></span>
+                            LinkedIn
+                        </label>
+                        <label class="toggle">
+                            <input type="checkbox" id="instagramToggle" checked>
+                            <span class="toggle-slider"></span>
+                            Instagram
+                        </label>
+                    </div>
+                </div>
+                <button class="save-btn" id="saveSettingsBtn">Save Settings</button>
+            </div>
+        </div>
+
+        <!-- Not Profile Page Message -->
+        <div class="not-profile" id="notProfileMessage" style="display: none;">
+            <div class="not-profile-icon">📄</div>
+            <h3>Visit a Profile Page</h3>
+            <p>Navigate to a LinkedIn or Instagram profile to get AI-powered insights.</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <button class="analyze-btn" id="analyzeBtn">🔍 Analyze Profile</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
