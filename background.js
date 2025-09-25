@@ -3,10 +3,8 @@
 
 class FindnAIBackground {
   constructor() {
-    // Use production backend URL when published
-    this.backendUrl = process.env.NODE_ENV === 'production' 
-      ? 'https://your-backend-url.railway.app'  // Replace with your deployed URL
-      : 'http://localhost:3002';
+    // Use your Render deployment URL
+    this.backendUrl = 'https://findn-ext.onrender.com';
     this.setupMessageListeners();
     this.keepAlive();
   }

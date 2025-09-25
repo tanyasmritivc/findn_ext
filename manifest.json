@@ -15,9 +15,8 @@
     "https://www.linkedin.com/*",
     "https://instagram.com/*",
     "https://www.instagram.com/*",
-    "https://*.railway.app/*",
-    "https://*.herokuapp.com/*",
-    "https://*.vercel.app/*"
+    "https://findn-ext.onrender.com/*",
+    "https://*.onrender.com/*"
   ],
   "background": {
     "service_worker": "background.js"
